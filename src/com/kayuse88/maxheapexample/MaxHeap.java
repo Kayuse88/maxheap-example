@@ -41,13 +41,13 @@ public class MaxHeap {
     }
 
     public int deleteMax() {
-        int min, last;
+        int max, last;
         int i, child;
 
         if (isEmpty())
             throw new ArithmeticException();
 
-        min = Elements[1];
+        max = Elements[1];
         last = Elements[Size--];
 
         for (i = 1; i * 2 <= Size; i = child) {
@@ -64,6 +64,6 @@ public class MaxHeap {
 
         Elements[i] = last;
 
-        return min;
+        return max;
     }
 }
